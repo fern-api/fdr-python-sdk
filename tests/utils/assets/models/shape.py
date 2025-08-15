@@ -8,7 +8,7 @@ import typing
 
 import typing_extensions
 
-from fdr.core.serialization import FieldMetadata
+from fern.core.serialization import FieldMetadata
 
 
 class Base(typing_extensions.TypedDict):
