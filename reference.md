@@ -1,6 +1,6 @@
 # Reference
 ## Api Latest
-<details><summary><code>client.api.latest.<a href="src/fern/api/latest/client.py">get_api_latest</a>(...)</code></summary>
+<details><summary><code>client.api.latest.<a href="src/fdr/api/latest/client.py">get_api_latest</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -15,9 +15,9 @@
 ```python
 import uuid
 
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.api.latest.get_api_latest(
@@ -61,7 +61,7 @@ client.api.latest.get_api_latest(
 </details>
 
 ## Api V1 Read
-<details><summary><code>client.api.v_1.read.<a href="src/fern/api/v_1/read/client.py">get_api</a>(...)</code></summary>
+<details><summary><code>client.api.v_1.read.<a href="src/fdr/api/v_1/read/client.py">get_api</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -76,9 +76,9 @@ client.api.latest.get_api_latest(
 ```python
 import uuid
 
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.api.v_1.read.get_api(
@@ -122,7 +122,7 @@ client.api.v_1.read.get_api(
 </details>
 
 ## Api V1 Register
-<details><summary><code>client.api.v_1.register.<a href="src/fern/api/v_1/register/client.py">register_api_definition</a>(...)</code></summary>
+<details><summary><code>client.api.v_1.register.<a href="src/fdr/api/v_1/register/client.py">register_api_definition</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -135,9 +135,9 @@ client.api.v_1.read.get_api(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.api.v_1.register.register_api_definition(
@@ -220,7 +220,7 @@ client.api.v_1.register.register_api_definition(
 </details>
 
 ## Dashboard
-<details><summary><code>client.dashboard.<a href="src/fern/dashboard/client.py">get_docs_sites_for_org</a>(...)</code></summary>
+<details><summary><code>client.dashboard.<a href="src/fdr/dashboard/client.py">get_docs_sites_for_org</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -247,9 +247,9 @@ Get all docs sites that belong to a given organization
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.dashboard.get_docs_sites_for_org(
@@ -291,7 +291,7 @@ client.dashboard.get_docs_sites_for_org(
 </details>
 
 ## Docs V1 Read
-<details><summary><code>client.docs.v_1.read.<a href="src/fern/docs/v_1/read/client.py">get_docs_for_domain_legacy</a>(...)</code></summary>
+<details><summary><code>client.docs.v_1.read.<a href="src/fdr/docs/v_1/read/client.py">get_docs_for_domain_legacy</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -304,9 +304,9 @@ client.dashboard.get_docs_sites_for_org(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_1.read.get_docs_for_domain_legacy(
@@ -347,7 +347,7 @@ client.docs.v_1.read.get_docs_for_domain_legacy(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_1.read.<a href="src/fern/docs/v_1/read/client.py">get_docs_for_domain</a>(...)</code></summary>
+<details><summary><code>client.docs.v_1.read.<a href="src/fdr/docs/v_1/read/client.py">get_docs_for_domain</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -360,9 +360,9 @@ client.docs.v_1.read.get_docs_for_domain_legacy(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_1.read.get_docs_for_domain(
@@ -404,7 +404,7 @@ client.docs.v_1.read.get_docs_for_domain(
 </details>
 
 ## Docs V1 Write
-<details><summary><code>client.docs.v_1.write.<a href="src/fern/docs/v_1/write/client.py">start_docs_register</a>(...)</code></summary>
+<details><summary><code>client.docs.v_1.write.<a href="src/fdr/docs/v_1/write/client.py">start_docs_register</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -417,9 +417,9 @@ client.docs.v_1.read.get_docs_for_domain(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_1.write.start_docs_register(
@@ -478,7 +478,7 @@ client.docs.v_1.write.start_docs_register(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_1.write.<a href="src/fern/docs/v_1/write/client.py">finish_docs_register</a>(...)</code></summary>
+<details><summary><code>client.docs.v_1.write.<a href="src/fdr/docs/v_1/write/client.py">finish_docs_register</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -491,11 +491,10 @@ client.docs.v_1.write.start_docs_register(
 <dd>
 
 ```python
-from fern.docs.v_1.write import DocsConfig, DocsDefinition, PageContent
+from fdr import FdrClient
+from fdr.docs.v_1.write import DocsConfig, DocsDefinition, PageContent
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_1.write.finish_docs_register(
@@ -553,7 +552,7 @@ client.docs.v_1.write.finish_docs_register(
 </details>
 
 ## Docs V2 Read
-<details><summary><code>client.docs.v_2.read.<a href="src/fern/docs/v_2/read/client.py">get_organization_for_url</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.read.<a href="src/fdr/docs/v_2/read/client.py">get_organization_for_url</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -566,9 +565,9 @@ client.docs.v_1.write.finish_docs_register(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.read.get_organization_for_url(
@@ -609,7 +608,7 @@ client.docs.v_2.read.get_organization_for_url(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.read.<a href="src/fern/docs/v_2/read/client.py">get_docs_url_metadata</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.read.<a href="src/fdr/docs/v_2/read/client.py">get_docs_url_metadata</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -622,9 +621,9 @@ client.docs.v_2.read.get_organization_for_url(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.read.get_docs_url_metadata(
@@ -665,7 +664,7 @@ client.docs.v_2.read.get_docs_url_metadata(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.read.<a href="src/fern/docs/v_2/read/client.py">get_docs_for_url</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.read.<a href="src/fdr/docs/v_2/read/client.py">get_docs_for_url</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -678,9 +677,9 @@ client.docs.v_2.read.get_docs_url_metadata(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.read.get_docs_for_url(
@@ -721,7 +720,7 @@ client.docs.v_2.read.get_docs_for_url(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.read.<a href="src/fern/docs/v_2/read/client.py">get_private_docs_for_url</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.read.<a href="src/fdr/docs/v_2/read/client.py">get_private_docs_for_url</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -734,9 +733,9 @@ client.docs.v_2.read.get_docs_for_url(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.read.get_private_docs_for_url(
@@ -777,7 +776,7 @@ client.docs.v_2.read.get_private_docs_for_url(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.read.<a href="src/fern/docs/v_2/read/client.py">list_all_docs_urls</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.read.<a href="src/fdr/docs/v_2/read/client.py">list_all_docs_urls</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -804,9 +803,9 @@ Returns a list of all public docs.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.read.list_all_docs_urls()
@@ -861,7 +860,7 @@ client.docs.v_2.read.list_all_docs_urls()
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.read.<a href="src/fern/docs/v_2/read/client.py">get_docs_config_by_id</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.read.<a href="src/fdr/docs/v_2/read/client.py">get_docs_config_by_id</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -888,9 +887,9 @@ Loads the Docs Config and any referenced APIs by ID.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.read.get_docs_config_by_id(
@@ -931,7 +930,7 @@ client.docs.v_2.read.get_docs_config_by_id(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.read.<a href="src/fern/docs/v_2/read/client.py">prepopulate_fdr_read_s_3_bucket</a>()</code></summary>
+<details><summary><code>client.docs.v_2.read.<a href="src/fdr/docs/v_2/read/client.py">prepopulate_fdr_read_s_3_bucket</a>()</code></summary>
 <dl>
 <dd>
 
@@ -958,9 +957,9 @@ Prepopulates the FDR read S3 bucket with docs definitions
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.read.prepopulate_fdr_read_s_3_bucket()
@@ -992,7 +991,7 @@ client.docs.v_2.read.prepopulate_fdr_read_s_3_bucket()
 </details>
 
 ## Docs V2 Write
-<details><summary><code>client.docs.v_2.write.<a href="src/fern/docs/v_2/write/client.py">start_docs_register</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.write.<a href="src/fdr/docs/v_2/write/client.py">start_docs_register</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1005,9 +1004,9 @@ client.docs.v_2.read.prepopulate_fdr_read_s_3_bucket()
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.write.start_docs_register(
@@ -1100,7 +1099,7 @@ client.docs.v_2.write.start_docs_register(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.write.<a href="src/fern/docs/v_2/write/client.py">start_docs_preview_register</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.write.<a href="src/fdr/docs/v_2/write/client.py">start_docs_preview_register</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1113,9 +1112,9 @@ client.docs.v_2.write.start_docs_register(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.write.start_docs_preview_register(
@@ -1189,7 +1188,7 @@ client.docs.v_2.write.start_docs_preview_register(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.write.<a href="src/fern/docs/v_2/write/client.py">finish_docs_register</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.write.<a href="src/fdr/docs/v_2/write/client.py">finish_docs_register</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1202,11 +1201,10 @@ client.docs.v_2.write.start_docs_preview_register(
 <dd>
 
 ```python
-from fern.docs.v_1.write import DocsConfig, DocsDefinition, PageContent
+from fdr import FdrClient
+from fdr.docs.v_1.write import DocsConfig, DocsDefinition, PageContent
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.write.finish_docs_register(
@@ -1263,7 +1261,7 @@ client.docs.v_2.write.finish_docs_register(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.write.<a href="src/fern/docs/v_2/write/client.py">transfer_ownership_of_domain</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.write.<a href="src/fdr/docs/v_2/write/client.py">transfer_ownership_of_domain</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1276,9 +1274,9 @@ client.docs.v_2.write.finish_docs_register(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.write.transfer_ownership_of_domain(
@@ -1328,7 +1326,7 @@ client.docs.v_2.write.transfer_ownership_of_domain(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.write.<a href="src/fern/docs/v_2/write/client.py">set_is_archived</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.write.<a href="src/fdr/docs/v_2/write/client.py">set_is_archived</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1341,9 +1339,9 @@ client.docs.v_2.write.transfer_ownership_of_domain(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.write.set_is_archived(
@@ -1393,7 +1391,7 @@ client.docs.v_2.write.set_is_archived(
 </dl>
 </details>
 
-<details><summary><code>client.docs.v_2.write.<a href="src/fern/docs/v_2/write/client.py">set_docs_url_metadata</a>(...)</code></summary>
+<details><summary><code>client.docs.v_2.write.<a href="src/fdr/docs/v_2/write/client.py">set_docs_url_metadata</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1406,9 +1404,9 @@ client.docs.v_2.write.set_is_archived(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs.v_2.write.set_docs_url_metadata(
@@ -1458,7 +1456,7 @@ client.docs.v_2.write.set_docs_url_metadata(
 </details>
 
 ## Generators
-<details><summary><code>client.generators.<a href="src/fern/generators/client.py">upsert_generator</a>(...)</code></summary>
+<details><summary><code>client.generators.<a href="src/fdr/generators/client.py">upsert_generator</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1485,11 +1483,10 @@ Update or create the specified generator.
 <dd>
 
 ```python
-from fern.generators import GeneratorType_Sdk
+from fdr import FdrClient
+from fdr.generators import GeneratorType_Sdk
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.upsert_generator(
@@ -1573,7 +1570,7 @@ client.generators.upsert_generator(
 </dl>
 </details>
 
-<details><summary><code>client.generators.<a href="src/fern/generators/client.py">get_generator_by_image</a>(...)</code></summary>
+<details><summary><code>client.generators.<a href="src/fdr/generators/client.py">get_generator_by_image</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1600,9 +1597,9 @@ Get the generator corresponding to the given docker image.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.get_generator_by_image(
@@ -1643,7 +1640,7 @@ client.generators.get_generator_by_image(
 </dl>
 </details>
 
-<details><summary><code>client.generators.<a href="src/fern/generators/client.py">get_generator</a>(...)</code></summary>
+<details><summary><code>client.generators.<a href="src/fdr/generators/client.py">get_generator</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1670,9 +1667,9 @@ Get the specified generator.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.get_generator(
@@ -1713,7 +1710,7 @@ client.generators.get_generator(
 </dl>
 </details>
 
-<details><summary><code>client.generators.<a href="src/fern/generators/client.py">list_generators</a>()</code></summary>
+<details><summary><code>client.generators.<a href="src/fdr/generators/client.py">list_generators</a>()</code></summary>
 <dl>
 <dd>
 
@@ -1740,9 +1737,9 @@ Get the all generators. This is currently not paginated since the list will be s
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.list_generators()
@@ -1774,7 +1771,7 @@ client.generators.list_generators()
 </details>
 
 ## Diff
-<details><summary><code>client.diff.<a href="src/fern/diff/client.py">diff</a>(...)</code></summary>
+<details><summary><code>client.diff.<a href="src/fdr/diff/client.py">diff</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1789,9 +1786,9 @@ client.generators.list_generators()
 ```python
 import uuid
 
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.diff.diff(
@@ -1846,7 +1843,7 @@ client.diff.diff(
 </details>
 
 ## DocsCache
-<details><summary><code>client.docs_cache.<a href="src/fern/docs_cache/client.py">invalidate</a>(...)</code></summary>
+<details><summary><code>client.docs_cache.<a href="src/fdr/docs_cache/client.py">invalidate</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1859,9 +1856,9 @@ client.diff.diff(
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.docs_cache.invalidate(
@@ -1903,7 +1900,7 @@ client.docs_cache.invalidate(
 </details>
 
 ## Generators Cli
-<details><summary><code>client.generators.cli.<a href="src/fern/generators/cli/client.py">get_latest_cli_release</a>(...)</code></summary>
+<details><summary><code>client.generators.cli.<a href="src/fdr/generators/cli/client.py">get_latest_cli_release</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -1930,9 +1927,9 @@ Get the latest CLI version that has not been yanked.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.cli.get_latest_cli_release()
@@ -1979,7 +1976,7 @@ client.generators.cli.get_latest_cli_release()
 </dl>
 </details>
 
-<details><summary><code>client.generators.cli.<a href="src/fern/generators/cli/client.py">get_changelog</a>(...)</code></summary>
+<details><summary><code>client.generators.cli.<a href="src/fdr/generators/cli/client.py">get_changelog</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2006,11 +2003,10 @@ Get the changelog for the specified CLI upgrade. The response will be a map of t
 <dd>
 
 ```python
-from fern.generators.commons import VersionRange_Inclusive
+from fdr import FdrClient
+from fdr.generators.commons import VersionRange_Inclusive
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.cli.get_changelog(
@@ -2060,7 +2056,7 @@ client.generators.cli.get_changelog(
 </dl>
 </details>
 
-<details><summary><code>client.generators.cli.<a href="src/fern/generators/cli/client.py">get_min_cli_for_ir</a>(...)</code></summary>
+<details><summary><code>client.generators.cli.<a href="src/fdr/generators/cli/client.py">get_min_cli_for_ir</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2087,9 +2083,9 @@ Get the minimum CLI version that supports the given IR version. This does not in
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.cli.get_min_cli_for_ir(
@@ -2130,7 +2126,7 @@ client.generators.cli.get_min_cli_for_ir(
 </dl>
 </details>
 
-<details><summary><code>client.generators.cli.<a href="src/fern/generators/cli/client.py">upsert_cli_release</a>(...)</code></summary>
+<details><summary><code>client.generators.cli.<a href="src/fdr/generators/cli/client.py">upsert_cli_release</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2157,9 +2153,9 @@ Update or create the specified CLI version.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.cli.upsert_cli_release(
@@ -2241,7 +2237,7 @@ client.generators.cli.upsert_cli_release(
 </dl>
 </details>
 
-<details><summary><code>client.generators.cli.<a href="src/fern/generators/cli/client.py">get_cli_release</a>(...)</code></summary>
+<details><summary><code>client.generators.cli.<a href="src/fdr/generators/cli/client.py">get_cli_release</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2268,9 +2264,9 @@ Get the specified CLI version.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.cli.get_cli_release(
@@ -2311,7 +2307,7 @@ client.generators.cli.get_cli_release(
 </dl>
 </details>
 
-<details><summary><code>client.generators.cli.<a href="src/fern/generators/cli/client.py">list_cli_releases</a>(...)</code></summary>
+<details><summary><code>client.generators.cli.<a href="src/fdr/generators/cli/client.py">list_cli_releases</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2338,9 +2334,9 @@ Get all CLI versions.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 response = client.generators.cli.list_cli_releases()
@@ -2393,7 +2389,7 @@ for page in response.iter_pages():
 </details>
 
 ## Generators Versions
-<details><summary><code>client.generators.versions.<a href="src/fern/generators/versions/client.py">get_latest_generator_release</a>(...)</code></summary>
+<details><summary><code>client.generators.versions.<a href="src/fdr/generators/versions/client.py">get_latest_generator_release</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2420,9 +2416,9 @@ Get the latest generator version that has not been yanked.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.versions.get_latest_generator_release(
@@ -2495,7 +2491,7 @@ client.generators.versions.get_latest_generator_release(
 </dl>
 </details>
 
-<details><summary><code>client.generators.versions.<a href="src/fern/generators/versions/client.py">get_changelog</a>(...)</code></summary>
+<details><summary><code>client.generators.versions.<a href="src/fdr/generators/versions/client.py">get_changelog</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2522,11 +2518,10 @@ Get the changelog for the specified generator upgrade. The response will be a ma
 <dd>
 
 ```python
-from fern.generators.commons import VersionRange_Inclusive
+from fdr import FdrClient
+from fdr.generators.commons import VersionRange_Inclusive
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.versions.get_changelog(
@@ -2585,7 +2580,7 @@ client.generators.versions.get_changelog(
 </dl>
 </details>
 
-<details><summary><code>client.generators.versions.<a href="src/fern/generators/versions/client.py">upsert_generator_release</a>(...)</code></summary>
+<details><summary><code>client.generators.versions.<a href="src/fdr/generators/versions/client.py">upsert_generator_release</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2612,9 +2607,9 @@ Update or create the specified generator version.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.versions.upsert_generator_release(
@@ -2721,7 +2716,7 @@ client.generators.versions.upsert_generator_release(
 </dl>
 </details>
 
-<details><summary><code>client.generators.versions.<a href="src/fern/generators/versions/client.py">get_generator_release</a>(...)</code></summary>
+<details><summary><code>client.generators.versions.<a href="src/fdr/generators/versions/client.py">get_generator_release</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2748,9 +2743,9 @@ Get the specified generator version.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.generators.versions.get_generator_release(
@@ -2800,7 +2795,7 @@ client.generators.versions.get_generator_release(
 </dl>
 </details>
 
-<details><summary><code>client.generators.versions.<a href="src/fern/generators/versions/client.py">list_generator_releases</a>(...)</code></summary>
+<details><summary><code>client.generators.versions.<a href="src/fdr/generators/versions/client.py">list_generator_releases</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2827,9 +2822,9 @@ Get all generator versions for the specified generator.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 response = client.generators.versions.list_generator_releases(
@@ -2892,7 +2887,7 @@ for page in response.iter_pages():
 </details>
 
 ## Git
-<details><summary><code>client.git.<a href="src/fern/git/client.py">get_repository</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">get_repository</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2919,9 +2914,9 @@ Get a repository by its name (mirroring the Github API, this is the main get req
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.git.get_repository(
@@ -2971,7 +2966,7 @@ client.git.get_repository(
 </dl>
 </details>
 
-<details><summary><code>client.git.<a href="src/fern/git/client.py">list_repositories</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">list_repositories</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -2998,9 +2993,9 @@ Get all repositories.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 response = client.git.list_repositories()
@@ -3076,7 +3071,7 @@ for page in response.iter_pages():
 </dl>
 </details>
 
-<details><summary><code>client.git.<a href="src/fern/git/client.py">upsert_repository</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">upsert_repository</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3105,11 +3100,10 @@ Update or create the specified repository.
 ```python
 import datetime
 
-from fern.git import CheckRun, FernRepository_Sdk, RepositoryId_Github
+from fdr import FdrClient
+from fdr.git import CheckRun, FernRepository_Sdk, RepositoryId_Github
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.git.upsert_repository(
@@ -3190,7 +3184,7 @@ client.git.upsert_repository(
 </dl>
 </details>
 
-<details><summary><code>client.git.<a href="src/fern/git/client.py">delete_repository</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">delete_repository</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3217,9 +3211,9 @@ Delete specified repository.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.git.delete_repository(
@@ -3269,7 +3263,7 @@ client.git.delete_repository(
 </dl>
 </details>
 
-<details><summary><code>client.git.<a href="src/fern/git/client.py">get_pull_request</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">get_pull_request</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3296,9 +3290,9 @@ Get a pull request by its ID.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.git.get_pull_request(
@@ -3357,7 +3351,7 @@ client.git.get_pull_request(
 </dl>
 </details>
 
-<details><summary><code>client.git.<a href="src/fern/git/client.py">list_pull_requests</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">list_pull_requests</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3384,9 +3378,9 @@ Get all pull requests.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 response = client.git.list_pull_requests()
@@ -3478,7 +3472,7 @@ for page in response.iter_pages():
 </dl>
 </details>
 
-<details><summary><code>client.git.<a href="src/fern/git/client.py">upsert_pull_request</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">upsert_pull_request</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3507,11 +3501,10 @@ Update or create the specified pull request.
 ```python
 import datetime
 
-from fern.git import CheckRun, PullRequestReviewer_User
+from fdr import FdrClient
+from fdr.git import CheckRun, PullRequestReviewer_User
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.git.upsert_pull_request(
@@ -3694,7 +3687,7 @@ client.git.upsert_pull_request(
 </dl>
 </details>
 
-<details><summary><code>client.git.<a href="src/fern/git/client.py">delete_pull_request</a>(...)</code></summary>
+<details><summary><code>client.git.<a href="src/fdr/git/client.py">delete_pull_request</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3721,9 +3714,9 @@ Delete specified pull request.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.git.delete_pull_request(
@@ -3783,7 +3776,7 @@ client.git.delete_pull_request(
 </details>
 
 ## Sdks Versions
-<details><summary><code>client.sdks.versions.<a href="src/fern/sdks/versions/client.py">compute_semantic_version</a>(...)</code></summary>
+<details><summary><code>client.sdks.versions.<a href="src/fdr/sdks/versions/client.py">compute_semantic_version</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3813,9 +3806,9 @@ If a version is found, a new semantic version is returned.
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.sdks.versions.compute_semantic_version(
@@ -3878,7 +3871,7 @@ package version.
 </details>
 
 ## SnippetsFactory
-<details><summary><code>client.snippets_factory.<a href="src/fern/snippets_factory/client.py">create_snippets_for_sdk</a>(...)</code></summary>
+<details><summary><code>client.snippets_factory.<a href="src/fdr/snippets_factory/client.py">create_snippets_for_sdk</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -3905,17 +3898,16 @@ Store endpoint snippets for a particular SDK.
 <dd>
 
 ```python
-from fern.commons import EndpointIdentifier
-from fern.snippets import TypeScriptSdk
-from fern.snippets_factory import (
+from fdr import FdrClient
+from fdr.commons import EndpointIdentifier
+from fdr.snippets import TypeScriptSdk
+from fdr.snippets_factory import (
     SdkSnippetsCreate_Typescript,
     SingleTypescriptSnippetCreate,
     TypeScriptSnippetCode,
 )
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.snippets_factory.create_snippets_for_sdk(
@@ -4000,7 +3992,7 @@ client.snippets_factory.create_snippets_for_sdk(
 </details>
 
 ## Snippets
-<details><summary><code>client.snippets.<a href="src/fern/snippets/client.py">get</a>(...)</code></summary>
+<details><summary><code>client.snippets.<a href="src/fdr/snippets/client.py">get</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -4027,11 +4019,10 @@ Get snippet by endpoint method and path
 <dd>
 
 ```python
-from fern.commons import EndpointIdentifier
+from fdr import FdrClient
+from fdr.commons import EndpointIdentifier
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.snippets.get(
@@ -4124,7 +4115,7 @@ request body you'd be sending to the endpoint as a cURL. If not specified then t
 </dl>
 </details>
 
-<details><summary><code>client.snippets.<a href="src/fern/snippets/client.py">load</a>(...)</code></summary>
+<details><summary><code>client.snippets.<a href="src/fdr/snippets/client.py">load</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -4137,11 +4128,10 @@ request body you'd be sending to the endpoint as a cURL. If not specified then t
 <dd>
 
 ```python
-from fern.snippets import SdkRequest_Python
+from fdr import FdrClient
+from fdr.snippets import SdkRequest_Python
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.snippets.load(
@@ -4220,7 +4210,7 @@ snippets for the latest published SDKs will be returned.
 </details>
 
 ## Templates
-<details><summary><code>client.templates.<a href="src/fern/templates/client.py">register</a>(...)</code></summary>
+<details><summary><code>client.templates.<a href="src/fdr/templates/client.py">register</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -4249,17 +4239,16 @@ Store endpoint snippet for a particular SDK.
 ```python
 import uuid
 
-from fern.commons import EndpointIdentifier
-from fern.snippets import Sdk_Typescript
-from fern.templates import (
+from fdr import FdrClient
+from fdr.commons import EndpointIdentifier
+from fdr.snippets import Sdk_Typescript
+from fdr.templates import (
     SnippetRegistryEntry,
     Template_Generic,
     VersionedSnippetTemplate_V1,
 )
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.templates.register(
@@ -4345,7 +4334,7 @@ client.templates.register(
 </dl>
 </details>
 
-<details><summary><code>client.templates.<a href="src/fern/templates/client.py">register_batch</a>(...)</code></summary>
+<details><summary><code>client.templates.<a href="src/fdr/templates/client.py">register_batch</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -4374,17 +4363,16 @@ Store endpoint snippets for a particular SDK.
 ```python
 import uuid
 
-from fern.commons import EndpointIdentifier
-from fern.snippets import Sdk_Typescript
-from fern.templates import (
+from fdr import FdrClient
+from fdr.commons import EndpointIdentifier
+from fdr.snippets import Sdk_Typescript
+from fdr.templates import (
     SnippetRegistryEntry,
     Template_Generic,
     VersionedSnippetTemplate_V1,
 )
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.templates.register_batch(
@@ -4489,7 +4477,7 @@ client.templates.register_batch(
 </dl>
 </details>
 
-<details><summary><code>client.templates.<a href="src/fern/templates/client.py">get</a>(...)</code></summary>
+<details><summary><code>client.templates.<a href="src/fdr/templates/client.py">get</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -4516,12 +4504,11 @@ Get the endpoint's snippet template for a particular SDK.
 <dd>
 
 ```python
-from fern.commons import EndpointIdentifier
-from fern.snippets import SdkRequest_Typescript
+from fdr import FdrClient
+from fdr.commons import EndpointIdentifier
+from fdr.snippets import SdkRequest_Typescript
 
-from fern import FernRegistry
-
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.templates.get(
@@ -4595,7 +4582,7 @@ client.templates.get(
 </details>
 
 ## Tokens
-<details><summary><code>client.tokens.<a href="src/fern/tokens/client.py">generate</a>(...)</code></summary>
+<details><summary><code>client.tokens.<a href="src/fdr/tokens/client.py">generate</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -4622,9 +4609,9 @@ Generate a token
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.tokens.generate(
@@ -4678,7 +4665,7 @@ The scope of the token. Valid scopes include:
 </dl>
 </details>
 
-<details><summary><code>client.tokens.<a href="src/fern/tokens/client.py">revoke</a>(...)</code></summary>
+<details><summary><code>client.tokens.<a href="src/fdr/tokens/client.py">revoke</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -4705,9 +4692,9 @@ Revoke a token
 <dd>
 
 ```python
-from fern import FernRegistry
+from fdr import FdrClient
 
-client = FernRegistry(
+client = FdrClient(
     token="YOUR_TOKEN",
 )
 client.tokens.revoke(
