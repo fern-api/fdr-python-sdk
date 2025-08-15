@@ -4,7 +4,7 @@
 
 import typing_extensions
 
-from fdr.core.serialization import FieldMetadata
+from fern.core.serialization import FieldMetadata
 
 
 class CircleParams(typing_extensions.TypedDict):

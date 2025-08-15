@@ -1,14 +1,14 @@
 # Fern Python Library
 
 [![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=https%3A%2F%2Fgithub.com%2Ffern-api%2Ffdr-python-sdk)
-[![pypi](https://img.shields.io/pypi/v/fern-fern-fdr-sdk)](https://pypi.python.org/pypi/fern-fern-fdr-sdk)
+[![pypi](https://img.shields.io/pypi/v/fdr-sdk-py)](https://pypi.python.org/pypi/fdr-sdk-py)
 
 The Fern Python library provides convenient access to the Fern API from Python.
 
 ## Installation
 
 ```sh
-pip install fern-fern-fdr-sdk
+pip install fdr-sdk-py
 ```
 
 ## Reference
@@ -20,9 +20,9 @@ A full reference for this library is available [here](https://github.com/fern-ap
 Instantiate and use the client with the following:
 
 ```python
-from fdr import FdrClient
+from fern import FernRegistry
 
-client = FdrClient(
+client = FernRegistry(
     token="YOUR_TOKEN",
 )
 client.api.v_1.register.register_api_definition(
@@ -38,9 +38,9 @@ The SDK also exports an `async` client so that you can make non-blocking calls t
 ```python
 import asyncio
 
-from fdr import AsyncFdrClient
+from fern import AsyncFernRegistry
 
-client = AsyncFdrClient(
+client = AsyncFernRegistry(
     token="YOUR_TOKEN",
 )
 
@@ -61,7 +61,7 @@ When the API returns a non-success status code (4xx or 5xx response), a subclass
 will be thrown.
 
 ```python
-from fdr.core.api_error import ApiError
+from fern.core.api_error import ApiError
 
 try:
     client.api.v_1.register.register_api_definition(...)
@@ -75,9 +75,9 @@ except ApiError as e:
 Paginated requests will return a `SyncPager` or `AsyncPager`, which can be used as generators for the underlying object.
 
 ```python
-from fdr import FdrClient
+from fern import FernRegistry
 
-client = FdrClient(
+client = FernRegistry(
     token="YOUR_TOKEN",
 )
 response = client.generators.cli.list_cli_releases()
@@ -96,9 +96,9 @@ The SDK provides access to raw response data, including headers, through the `.w
 The `.with_raw_response` property returns a "raw" client that can be used to access the `.headers` and `.data` attributes.
 
 ```python
-from fdr import FdrClient
+from fern import FernRegistry
 
-client = FdrClient(
+client = FernRegistry(
     ...,
 )
 response = client.api.v_1.register.with_raw_response.register_api_definition(
@@ -142,9 +142,9 @@ The SDK defaults to a 60 second timeout. You can configure this with a timeout o
 
 ```python
 
-from fdr import FdrClient
+from fern import FernRegistry
 
-client = FdrClient(
+client = FernRegistry(
     ...,
     timeout=20.0,
 )
@@ -163,9 +163,10 @@ and transports.
 
 ```python
 import httpx
-from fdr import FdrClient
 
-client = FdrClient(
+from fern import FernRegistry
+
+client = FernRegistry(
     ...,
     httpx_client=httpx.Client(
         proxies="http://my.test.proxy.example.com",

@@ -4,7 +4,7 @@
 
 import typing_extensions
 
-from fdr.core.serialization import FieldMetadata
+from fern.core.serialization import FieldMetadata
 
 
 class SquareParams(typing_extensions.TypedDict):
