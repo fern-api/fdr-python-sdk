@@ -3,7 +3,7 @@ name = "fdr-sdk-py"
 
 [tool.poetry]
 name = "fdr-sdk-py"
-version = "0.0.4"
+version = "0.0.5"
 description = ""
 readme = "README.md"
 authors = []
